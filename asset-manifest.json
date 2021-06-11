@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/BookStack/static/css/main.ff8f7e04.chunk.css",
+    "main.js": "/BookStack/static/js/main.e2464140.chunk.js",
+    "main.js.map": "/BookStack/static/js/main.e2464140.chunk.js.map",
+    "runtime-main.js": "/BookStack/static/js/runtime-main.a92b7891.js",
+    "runtime-main.js.map": "/BookStack/static/js/runtime-main.a92b7891.js.map",
+    "static/css/2.d42b6046.chunk.css": "/BookStack/static/css/2.d42b6046.chunk.css",
+    "static/js/2.0aab3619.chunk.js": "/BookStack/static/js/2.0aab3619.chunk.js",
+    "static/js/2.0aab3619.chunk.js.map": "/BookStack/static/js/2.0aab3619.chunk.js.map",
+    "index.html": "/BookStack/index.html",
+    "static/css/2.d42b6046.chunk.css.map": "/BookStack/static/css/2.d42b6046.chunk.css.map",
+    "static/css/main.ff8f7e04.chunk.css.map": "/BookStack/static/css/main.ff8f7e04.chunk.css.map",
+    "static/js/2.0aab3619.chunk.js.LICENSE.txt": "/BookStack/static/js/2.0aab3619.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/BookStack/static/media/roboto-vietnamese-400-normal.c0bec65d.woff2"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a92b7891.js",
+    "static/css/2.d42b6046.chunk.css",
+    "static/js/2.0aab3619.chunk.js",
+    "static/css/main.ff8f7e04.chunk.css",
+    "static/js/main.e2464140.chunk.js"
+  ]
+}
