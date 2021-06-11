@@ -221,13 +221,15 @@ function AddForm(props) {
               helperText="from 0 to 10"
               onChange={(e) => setRaiting(e.target.value)}
               value={raiting}
+              
               InputProps={{
                 inputProps: {
                   min: 0,
                   max: 10,
+                 
                 },
               }}
-              style={{ marginBottom: "30px" }}
+              style={{ marginBottom: "30px"}} 
             />
             <Container>
               <TextField
@@ -246,6 +248,25 @@ function AddForm(props) {
                 null
               )}
             </Container>
+            
+
+            {raiting !==0 && (raiting > 10 || raiting <0 ) && <Typography
+                variant="caption"
+                display="block"
+                style={{ color: "red" }}
+              >
+                Check Raiting before adding
+              </Typography> }
+              {year && (year > new Date().getFullYear +3 || year < 1800 ) && <Typography
+                variant="caption"
+                display="block"
+                style={{ color: "red" }}
+              >
+                Check Year before adding
+              </Typography> } 
+
+
+
 
             <Button
               onClick={pushBook}
@@ -257,6 +278,8 @@ function AddForm(props) {
             >
               ADD new book
             </Button>
+            
+
           </Container>
         ) : (
           <Container className="delete-form">

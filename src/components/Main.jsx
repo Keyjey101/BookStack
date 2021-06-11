@@ -87,7 +87,7 @@ function Main() {
 
   return (
     <div className="Main">
-      <Header />
+      
       <label style={{ marginRight: "1%", color: "whitesmoke" }}>Sort by</label>
       <Select
         value={sortBy}
