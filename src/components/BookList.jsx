@@ -40,7 +40,7 @@ function BookList({ year, listOfBooks }) {
                 display="block"
               >
                 {e.raiting
-                  ? e.raiting == 10
+                  ? e.raiting === 10
                     ? "ДЕСЯТЬ ИЗ ДЕСЯТИ НА КОНЧИКАХ ПАЛЬЦЕВ"
                     : e.raiting + "/10"
                   : "not rated yet"}

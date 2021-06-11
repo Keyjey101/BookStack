@@ -27,16 +27,17 @@ function AddForm(props) {
 
   const isbnS = isbn.replace(/-|\s/g, "");
   const checkIsnb = function (a, b, c) {
-    if (a.match(/[a-z]/i)) {
-      return false;
-    }
+    
+    if (a.match(/[0-9]/i) && a.length === 13) {
+      
 
     for (b = c = 0; a[c] && (b += a[c++] * (c % 2 ? 1 : 3)); );
-    return !(b % 10);
+    return !(b % 10) }
+    return false;
   };
 
   function pushBook() {
-
+/*
     //дополнительные проверки по идее на кнопку навешаны, можно удалить
     if (authors[0].author === "" || title === "") {
       return alert("make sure you complete all fields with * symbol"); 
@@ -44,15 +45,15 @@ function AddForm(props) {
     if (raiting > 10 || raiting <0 ) return alert('raiting should be in range 0..10') 
     if (year <1800 || year > new Date().getFullYear() + 3) return alert(`we are not historiacal museum, make sure that year of published in range of 1800..${new Date().getFullYear() + 3}`)
    //
-   
+   */
     firebase
       .firestore()
       .collection("books")
       .add({
-        author: authors.map((x) => x.author),
+        author: authors.map((x) => x.author).filter((x) => x !==''),
         year: year ? Number.parseInt(year) : null,
         title: title,
-        raiting: raiting,
+        raiting: raiting ? Number.parseInt(raiting) : null,
         ISBN: checkIsnb(isbnS) ? isbn : null,
       })
       .then(() => {
@@ -99,6 +100,8 @@ function AddForm(props) {
   const newAuthor = () => {
     setAuthors([...authors, { author: "", key: uuidv4() }]);
   };
+
+
 
   return (
     <Container maxWidth={'xs'}>
@@ -232,15 +235,15 @@ function AddForm(props) {
                 inputProps={{ maxLength: 17 }}
                 type="text"
                 onChange={(e) => setIsbn(e.target.value)}
-                value={checkIsnb(isbnS) ? isbn : null}
+                value={checkIsnb(isbnS) ? isbn.replace(/[^a-zA-Z0-9]/g,'-') : undefined}
                 style={{ marginBottom: "30px" }}
               />{" "}
-              {checkIsnb(isbnS) ? (
-                isbnS !== "" ? (
+              {isbnS !== "" ? (checkIsnb(isbnS) ? 
+                 
                   <CheckIcon style={{ color: "green", marginTop: "1rem" }} />
-                ) : null
+                 : <ClearIcon style={{ color: "red", marginTop: "1rem" }} />
               ) : (
-                <ClearIcon style={{ color: "red", marginTop: "1rem" }} />
+                null
               )}
             </Container>
 
@@ -249,7 +252,7 @@ function AddForm(props) {
               variant="contained"
               color="primary"
               size="large"
-              disabled={authors.length === 0 || title === '' || year && (year <1800 || year > new Date().getFullYear() + 3) || raiting && (raiting >10 || raiting < 0) ? true : (authors[0].author === '' ? true : false)}
+              disabled={(authors.length === 0) || (title === '' || ((year && (year <1800 || year > new Date().getFullYear() + 3)) || (raiting && (raiting >10 || raiting < 0)) ? true : (authors[0].author === '')) ? true : false)}
               style={{ marginBottom: "30px" }}
             >
               ADD new book
