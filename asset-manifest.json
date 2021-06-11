@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/BookStack/static/css/main.ff8f7e04.chunk.css",
-    "main.js": "/BookStack/static/js/main.e2464140.chunk.js",
-    "main.js.map": "/BookStack/static/js/main.e2464140.chunk.js.map",
+    "main.js": "/BookStack/static/js/main.960cf158.chunk.js",
+    "main.js.map": "/BookStack/static/js/main.960cf158.chunk.js.map",
     "runtime-main.js": "/BookStack/static/js/runtime-main.a92b7891.js",
     "runtime-main.js.map": "/BookStack/static/js/runtime-main.a92b7891.js.map",
     "static/css/2.d42b6046.chunk.css": "/BookStack/static/css/2.d42b6046.chunk.css",
@@ -19,6 +19,6 @@
     "static/css/2.d42b6046.chunk.css",
     "static/js/2.0aab3619.chunk.js",
     "static/css/main.ff8f7e04.chunk.css",
-    "static/js/main.e2464140.chunk.js"
+    "static/js/main.960cf158.chunk.js"
   ]
 }
