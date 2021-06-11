@@ -84,6 +84,7 @@ function Main() {
         )
       : null;
 
+
   return (
     <div className="Main">
       <Header />
@@ -128,7 +129,7 @@ function Main() {
               >
               
                 {shufB.raiting
-                  ? shufB.raiting == 10
+                  ? shufB.raiting === 10
                     ? "ДЕСЯТЬ ИЗ ДЕСЯТИ НА КОНЧИКАХ ПАЛЬЦЕВ"
                     : shufB.raiting + "/10"
                   : "not rated yet"}
