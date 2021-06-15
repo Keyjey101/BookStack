@@ -1,6 +1,6 @@
 # BookStack
 
-SPA created with React & Material-ui which allows you build youre book storage
+SPA created with React & Material-ui which allows you build book storage
 
 ## Live-demo
 
