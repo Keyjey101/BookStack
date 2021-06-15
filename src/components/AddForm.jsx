@@ -257,7 +257,7 @@ function AddForm(props) {
               >
                 Check Raiting before adding
               </Typography> }
-              {year && (year > new Date().getFullYear +3 || year < 1800 ) && <Typography
+              {year && (year > new Date().getFullYear() +3 || year < 1800 ) && <Typography
                 variant="caption"
                 display="block"
                 style={{ color: "red" }}
